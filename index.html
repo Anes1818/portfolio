@@ -785,8 +785,7 @@ footer { font-family: 'Raleway', sans-serif;}
   <div class="button-container"><button class="play-poem-btn" id="playPoem">make me ur radio:3</button></div>
   <div id="poemModal" class="modal">
     <div class="modal-content">
-        <p>A voice recording of the poem should appear now. This is just a sample and can be customized.</p>
-        <button id="closeModal">OK</button>
+        
     </div>
 </div>
 
@@ -1047,25 +1046,10 @@ function updateLoveCounter() {
     }, 1000);
 });
 
-document.getElementById("playPoem").addEventListener("click", function() {
-    const audio = document.getElementById("poemAudio");
-    const music = document.getElementById("bg-music");  
-    const button = this; // زر تشغيل القصيدة
 
-    if (audio.paused) {
-        // 🔇 إيقاف الموسيقى الخلفية عند تشغيل القصيدة
-        music.pause();
-        music.currentTime = 0; // إعادة تشغيلها من البداية عند تشغيلها مجددًا
+   
+    
 
-        // ▶ تشغيل القصيدة
-        audio.play();
-        button.textContent = "⏸ turn me off"; // تغيير الزر إلى "إيقاف"
-    } else {
-        // ⏸ إيقاف القصيدة عند الضغط مجددًا
-        audio.pause();
-        button.textContent = "▶ make me ur radio"; // تغيير الزر إلى "تشغيل"
-    }
-});
 
 
 });
